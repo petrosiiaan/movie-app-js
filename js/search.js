@@ -30,8 +30,6 @@ form.addEventListener('submit', (e) => {
 
             xmlReq.onprogress = (e) => {
                 console.log(e.loaded + "/" + e.total)
-                let percent = (e.loaded / e.total) * 100 + "%"
-                border.style.width = percent
             }
 
             if(method === "GET") {

@@ -44,6 +44,7 @@ modal.addEventListener('click', () => {
     modal.remove()
     for(let i = 0; i < iframe.length; i++ ) {
         iframe[i].src = ''
+        iframe[i].style.display = 'none'
     }
 })
 
