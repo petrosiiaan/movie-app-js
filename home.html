@@ -8,30 +8,28 @@
 </head>
 <body>
     <div class="search-content">
-        <form id="form">
-            <input id="searchInput" placeholder="Search movies" />
-        </form>
+        <input id="searchInput" placeholder="Search movies" />
     </div>
-    <div class="no_movies">
+    <div class="no_movies" id="noMovies">
         <p>No movies yet</p>
     </div>
-    <div class="movies"></div>
-    <div class="movies-info">
-        <div class="movies-info-background">
-            <div class="movies-info-photo">
+    <div class="movies" id="movies"></div>
+    <div class="movies-info" id="moviesInfo">
+        <div class="movies-info-background" id="moviesInfoBack">
+            <div class="movies-info-photo" id="infoPhoto">
                 <img src="" id="image" />
             </div>
             <div class="movies-info-text">
                 <p id="par"></p>
             </div>
         </div>
-        <div class="actors">
+        <div class="actors" id="actorsDiv">
         </div>
         <div class="videos">
             <h1>Videos:</h1>
             <div class="videos-content">
                 <div class="video-img" id="vid-0">
-                    <iframe id="iframe0" style="left: 436px;" width="560" height="315" src="https://www.youtube.com/embed/qT_-ISKI8FM" frameborder="0"
+                    <iframe id="iframe0" width="560" height="315" src="https://www.youtube.com/embed/qT_-ISKI8FM" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <img src="https://i.ytimg.com/vi/qT_-ISKI8FM/maxresdefault.jpg" width="350">
@@ -39,7 +37,7 @@
                 </div>
 
                 <div class="video-img" id="vid-1">
-                    <iframe id="iframe1" style="left: -90px;" width="560" height="315" src="https://www.youtube.com/embed/vN12KY7eR8U" frameborder="0"
+                    <iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/vN12KY7eR8U" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     <img src="https://i.ytimg.com/vi/vN12KY7eR8U/maxresdefault.jpg" width="350">
@@ -58,7 +56,8 @@
     </div>
     <script src="js/clickable.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/search-films.js"></script>
+    <script src="/js/request.js"></script>
+    <script src="js/actors.js"></script>
     <script src="js/api/api.js"></script>
     <script src="https://kit.fontawesome.com/5b335a90ae.js" crossorigin="anonymous"></script>
 </body>

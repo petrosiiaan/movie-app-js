@@ -22,9 +22,9 @@ body {
 }
 
 
-.search-content > form > input {
+.search-content > input {
     padding: 10px;
-    width: 100%;
+    width: 90%;
     outline: 0;
     border: 0;
     font-size: 16px;
@@ -46,7 +46,6 @@ body {
 
 .film-img {
     width: 100%;
-    height: 449px;
 }
 
 .movies {
@@ -92,7 +91,7 @@ body {
 .movies-info {
     margin-top: 40px;
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     display: none
     /* border: 1px solid red; */
 }
@@ -189,18 +188,23 @@ body {
     position: absolute;
     bottom: 300px;
     z-index: 1;
+    
 }
 
 .video-img > #iframe2 {
-    left: -386px;
+    /* left: -386px; */
     display: none;
+    right: 50%;
+    left: 50%;
 }
 
 .video-img > #iframe1 {
     display: none;
+    left: -10vh;
 }
 
 .video-img > #iframe0 {
-    left: 385px;
+    /* left: 385px; */
     display: none;
+    left: 67vh;
 }

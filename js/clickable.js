@@ -1,50 +1,46 @@
 let videoImg = document.querySelectorAll('.video-img')
-let iframes = document.getElementsByTagName('iframe')
-
-let iframe = [...iframes]
-
-let videos = [...videoImg]
-
+let iframes = document.querySelectorAll('iframe')
 
 let modal = document.createElement('div')
 
+let iframesSrc = {
+    iframeSrc1: "https://www.youtube.com/embed/qT_-ISKI8FM",
+    iframeSrc2: "https://www.youtube.com/embed/vN12KY7eR8U",
+    iframeSrc3: "https://www.youtube.com/embed/OlnwgS-gk8Y"
+}
 
-let iframeSrc1 = "https://www.youtube.com/embed/qT_-ISKI8FM"
-let iframeSrc2 = "https://www.youtube.com/embed/vN12KY7eR8U"
-let iframeSrc3 = "https://www.youtube.com/embed/OlnwgS-gk8Y"
-
-for(let i = 0; i < videos.length; i++) {
-    videos[0].addEventListener('click', () => {
+for(let i = 0; i < videoImg.length; i++) {
+    videoImg[0].addEventListener('click', () => {
         modal.classList.add('modal')
         document.body.appendChild(modal)
-        iframe[0].style.display = 'block'
-        iframe[0].src = iframeSrc1
+        iframes[0].style.display = 'block'
+        iframes[0].src = iframesSrc.iframeSrc1
 
     })
-    videos[1].addEventListener('click', () => {
+    videoImg[1].addEventListener('click', () => {
         modal.classList.add('modal')
         document.body.appendChild(modal)
-        iframe[0].style.display = 'none'
-        iframe[1].style.display = 'block'
-        iframe[1].src = iframeSrc2
+        iframes[0].style.display = 'none'
+        iframes[1].style.display = 'block'
+        iframes[1].src = iframesSrc.iframeSrc2
 
     })
-    videos[2].addEventListener('click', () => {
+    videoImg[2].addEventListener('click', () => {
         modal.classList.add('modal')
         document.body.appendChild(modal)
-        iframe[0].style.display = 'none'
-        iframe[1].style.display = 'none'
-        iframe[2].style.display = 'block'
-        iframe[2].src = iframeSrc3
+        iframes[0].style.display = 'none'
+        iframes[1].style.display = 'none'
+        iframes[2].style.display = 'block'
+        iframes[2].src = iframesSrc.iframeSrc3
     })
 
 }
 
 modal.addEventListener('click', () => {
     modal.remove()
-    for(let i = 0; i < iframe.length; i++ ) {
-        iframe[i].src = ''
-        iframe[i].style.display = 'none'
+    for(let i = 0; i < iframes.length; i++ ) {
+        iframes[i].src = ''
+        iframes[i].style.display = 'none'
     }
 })
 
