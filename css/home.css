@@ -208,3 +208,21 @@ body {
     display: none;
     left: 67vh;
 }
+
+.videos {
+    display: flex;
+    justify-content: space-around;
+}
+
+iframe {
+    width: 400px;
+    height: 300px
+}
+
+
+.video-pop-up {
+    width: 400px;
+    height: 345px;
+    position: absolute;
+    top: 0;
+}
