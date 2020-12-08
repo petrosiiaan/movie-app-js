@@ -1,6 +1,6 @@
 function videos(vid) {
     video_container.innerHTML = ""
-    for(let i = 0; i < 4; i++) {
+    for(let i = 0; i < 3; i++) {
         let videoContent = document.createElement('div')
         videoContent.classList.add('video-content')
         let videos = document.createElement('iframe')
@@ -15,7 +15,6 @@ function videos(vid) {
         let keyVid = vid[i].key
         videos.src = routes.youtubeVid(keyVid)
         video_container.appendChild(videoContent) 
-
 
         videoPopUp.onclick = () => {
             let vids = videos; 
